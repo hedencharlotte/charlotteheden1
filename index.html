@@ -2,32 +2,39 @@
 <html lang=en>
   <head>
     <meta charset=utf-8>
-    <title>charlotte kodar</title>
+    <title>charlotteheden</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>The winner is:</h1>
+    <h1>Charlotte Hedén</h1>
+    <h3>Marketing and PR</h3>
+    <img src="ch.jpg">
     <div class="inputSection">
       <div class="inputs">
       <input placeholder="Something"></input>
       </div>
-      <button class="addOption">Add</button>
+      <button class="openCV">CV</button>
     </div>
     <div class="resultSection"></div>
-    <button class="submit">Go!</button>
+    <button class="contact">Contact</button>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
     $(function() {
       $('.resultSection').hide()
 
-      var add_option = function() {
+      var open_cv = function() {
+        window.open("cv.html");
+        /*
         $('.inputs').append('<input></input>')
-      }
-      $('.addOption').click(add_option)
+      */}
+      $('.openCV').click(open_cv)
 
       var options = []
-      var submit = function() {
+      var contact = function() {
+        window.open("contact.html")
+        /*
         $('.inputSection').hide()
         $('.resultSection').css('display', 'flex')
         $('input').each(function() {
@@ -36,8 +43,8 @@
         var winner = options[Math.floor(Math.random() * options.length)]
         console.log(winner)
         $('.resultSection').text(winner)
-      }
-      $('.submit').click(submit)
+      */}
+      $('.contact').click(contact)
     })
     </script>
   </body>
